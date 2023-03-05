@@ -38,14 +38,11 @@ print("Sounds good " + name + ", I will have that " + order + " ready for you in
 
 amount = input("How many " + order + " would you like?\n")
 
-tip_amount = input("Enter a percentage or dollar amount for the tip (e.g. 10 or $2.50):\n")
+tip_amount = input("Enter a percentage amount for the tip (ex. 10, 15):\n")
 
-if tip_amount[0] == "$":
-    tip = float(tip_amount[1:])
-else:
-    tip = float(tip_amount) / 100
+tip = tip_amount/100
 
-total = price * int(amount) * 1.13 * (1 + tip)
+total = price * int(amount) * 1.13 * tip
 
 formatted_total = "{:.2f}".format(total)
 
