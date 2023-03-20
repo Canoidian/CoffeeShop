@@ -23,22 +23,23 @@ if order not in menu:
     print("Sorry, " + order + " is not on the menu.")
     exit()
 
-if order == "Vanilla Latte":
+if order in ["Vanilla Latte", "vanilla latte", "Vanilla latte", "vanilla Latte"]:
     price = 10
-elif order == "Black Coffee":
+elif order in ["Black Coffee", "black coffee", "Black coffee", "black Coffee"]:
     price = 3
-elif order == "Espresso":
+elif order in ["Espresso", "espresso"]:
     price = 5
-elif order == "Latte":
+elif order in ["Latte", "latte"]:
     price = 10
-elif order == "Cappuccino":
+elif order in ["Cappuccino", "cappuccino"]:
     price = 8
+
 
 print("Sounds good " + name + ", I will have that " + order + " ready for you in one moment.")
 
 amount = input("How many " + order + " would you like?\n")
 
-tip_amount = input("Enter a percentage amount for the tip (ex. 10, 15):\n")
+tip_amount = int(input("Enter a percentage amount for the tip (ex. 10, 15):\n"))
 
 tip = tip_amount/100
 
